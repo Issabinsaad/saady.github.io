@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my CV</title>
+</head>
+<style>
+    body{
+        background-color: lightgoldenrodyellow;
+    }
+    h1{
+        color: white;
+        background-color: blue;
+    }
+    table,tr,td{
+        border-collapse: collapse;
+        border: 1px solid black;
+        
+        
+    }
+   
+</style>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">Curriculum Vitae</h1>
+        <h2><u>Personal Information</u></h2>
+        <table style="width: 35%;">
+            <tr>
+                <td>Names</td>
+                <td>Issa Takdir saad</td>
+                
+                
+            </tr>
+            <tr>
+                <td>Email </td>
+                <td>issabinsaad9@gmail.com</td>  
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td>0777177248</td>
+                <tr>
+                    <td>Adress</td>
+                    <td>Zanzibar</td>
+
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>Male</td>
+
+                </tr>
+                <tr>
+                    <td>Religion:</td>
+                    <td>Islamic</td>
+                </tr>
+
+            </tr>
+            
+
+        </table>
+        <h2><u>Education Background</u></h2>
+        <table style="width: 30%;">
+            <tr>
+                <td>State University of Zanzibar: </td>
+                 <td>2021-2024</td>
+
+            </tr>
+            <tr>
+                <td>Mnemonic Academy</td>
+                <td>2018-2020</td>
+            </tr>
+            <tr>
+                <td>Faraja Sec school</td>
+                <td>2014-2017</td>
+            </tr>
+            <tr>
+                <td>Mwera primary school</td>
+                <td>2006-2013</td>
+            </tr>
+        </table>
+        <h2><u>Working Experience</u></h2>
+            <ul>
+                <li>ICT CENTER	: Suza</li>
+                <li>Jendele Tech solution	: Amaani</li>
+            </ul>
+			
+        <h2><u>Skills</u></h2>
+        <ol>
+            <li>computer maintainance</li>
+            <li>Networker designer</li>
+            <li>problem solving skill</li>
+        </ol>
+        <h2><u>Proffesional Course</u></h2>
+        <ul>
+            <li>computer maintainance course</li>
+            <li>computer application Course</li>
+            <li>software develpoment course</li>
+        </ul>
+        <h2><u>Project</u></h2>
+        <ul>
+            <li>Task allocation system</li>
+        </ul>
+        <p>The general objective of a task allocation system is to assign tasks 
+        to individuals or groupsin an efficient and effective manner <br>
+        This can involve assigning  tasks to team members based on
+         their skills, availability, and workload, or it can involve
+        assigning <br>
+        tasks to machines or otherresources.</p>
+        <ol>
+            <li>JAVASCRIPT</li>
+            <li>HTML & CSS</li>
+            <li>MY SQL DATABASE</li>
+        </ol>
+        <p>this project deals with labour expecially merchanican, networker,engineering,and other who work at  various place <br>
+        and I make this project as software developer and after testing and implemetation become the end of my project on  1 may 2023
+        </p>
+        <h2><u> Experience</u></h2>
+        <p>when I was at nag dadaz high school i was a leader of environmental department on 2020</p>
+        <h2><u>Dependents</u></h2>
+        
+        <ul>
+            <li>father</li>
+            <li>mother</li>
+        </ul>
+    </div>
+	
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15865.675177817964!2d39.30714745002535!3d-6.208362718504129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185cd87fff0e403b%3A0xe5c2714deb19d725!2sTunguu!5e0!3m2!1sen!2stz!4v1682943518384!5m2!1sen!2stz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+    <div class="container">
+        <h2>Contact us</h2>
+        <form id="saad">
+            <label for="Email">Email</label>
+            <input type="email" id="email" name="email">   <label for="Phone">Phone</label>
+            <input type="tel" id="Phone" name="Phone"><br><br>
+            <label for="Comment">Comment</label>
+            <input type="textarea" size = "20"id="comment`" name="comment`"><br><br>
+            <input  type="submit" value="submit"><br>
+
+        </form>
+       
+    </div>
+   <script>
+        let contactus = document.getElementById("saad");
+        contactus.addEventListener('submit',function(event){
+            event.preventDefault();
+            //data in html put in javascript
+            let email = document.getElementById("email").value;
+            Phone = document.getElementById("Phone").value;
+            let message = document.getElementById("message").value;
+            //contant take data inform of object
+            let contact ={
+            name:name,email:email,phone:Phone
+            };
+            //data inform of JSON
+            let contacts =JSON.parse(localStorage.getItem("contacts"))||[];
+            // when user want to see those data hence can be tansform from json to object
+            contacts.push(contact);
+            localStorage.setItem("contacts",JSON.stringify(contacts));
+            alert(`thank you ${name} for ure comment`);
+            contactus.reset();
+        });    
+   </script> 
+
+   <br>
+
+   <a href="login.html">please login here</a>
+</body>
+</html>
